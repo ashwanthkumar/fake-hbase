@@ -36,6 +36,11 @@
   </description>
   <url>http://www.kiji.org</url>
 
+  <properties>
+      <scala.version>2.10.1</scala.version>
+      <scala-major.version>2.10</scala-major.version>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
@@ -69,6 +74,7 @@
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
+      <version>${scala.version}</version>
       <scope>compile</scope>
     </dependency>
 
@@ -101,7 +107,8 @@
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala.version}</artifactId>
+      <artifactId>scalatest_${scala-major.version}</artifactId>
+      <version>2.0.M5b</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
